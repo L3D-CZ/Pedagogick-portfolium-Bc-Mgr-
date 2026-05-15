@@ -1,0 +1,16 @@
+basic.forever(function () {
+    // Podmínka zjišťující, zda je úroveň světla menší než 50
+    if (input.lightLevel() < 50) {
+        // Zobrazí symbol měsíce (rozsvítí konkrétní LED diody)
+        basic.showLeds(`
+            . . # # .
+            . . . . #
+            . . . . #
+            . . . . #
+            . . # # .
+            `)
+    } else {
+        // Pokud je světla dostatek, displej se vymaže (zhasne)
+        basic.clearScreen()
+    }
+})
